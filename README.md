@@ -132,9 +132,7 @@ Expected
 
 ### Evidence
 
-[Screenshot of Event ID 4624]
-
----
+4624-successful-logon.png
 
 # Investigation 2 — Event ID 4625
 
