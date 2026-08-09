@@ -132,7 +132,8 @@ Expected
 
 ### Evidence
 
-![Event ID 4624 - Successful Logon](4624-successful-logon.png)
+<img width="635" height="436" alt="4624-successful-logon" src="https://github.com/user-attachments/assets/45921647-ef4c-4483-858d-68a448ebb071" />
+
 
 # Investigation 2 — Event ID 4625
 
