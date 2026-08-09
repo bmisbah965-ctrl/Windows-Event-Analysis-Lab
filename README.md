@@ -90,50 +90,45 @@ Identify and analyze successful authentication events on the Windows system.
 
 ### Test Activity
 
-**Date/Time:** 
+**Date/Time:** 2026-08-09 4:34:57 PM
 
-**Account Used:** [Username]
+**Account Used:** DESKTOP-N5DHB$
 
-**Method:** [Local login / RDP / other]
+**Method:** Service Logon
 
 ### Event Details
 
 **Event ID:** 4624
 
-**Time:** [Timestamp]
+**Time:** 2026-08-09 4:34:57 PM
 
-**Username:** [Username]
+**Username:** DESKTOP-N5DHB$
 
-**Domain:** [Domain/Computer name]
+**Domain:** WORKGROUP
 
-**Logon Type:** [e.g., 2]
+**Logon Type:** 5
 
-**Source Network Address:** [IP address / -]
+**Source Network Address:** -
 
-**Workstation Name:** [Name / -]
+**Workstation Name:** -
 
-**Authentication Package:** [NTLM / Kerberos / etc.]
-
-### Investigation
-
-Answer the following:
-
-1. Which account successfully logged in?
-2. When did the login occur?
-3. What was the Logon Type?
-4. What was the source address?
-5. Was the login expected?
-6. Are there related failed login attempts before this event?
+**Authentication Package:** Negotiate
 
 ### Findings
 
-[Write your findings here.]
+The event shows a successful logon for the computer account DESKTOP-N5DHB$ at 2026-08-09 4:34:57 PM.
+
+The Logon Type 5 indicates that this was a Service Logon, rather than an interactive user login. The authentication package used was Negotiate.
+
+No source network address or workstation name was recorded (-), which is consistent with this being a service logon rather than a remote network login.
+
+The activity appears to be expected/benign because the account is the local computer account and the event represents service-related authentication within the Windows system.
+
+No related failed logon attempts were identified before this event during the review period.
 
 ### Verdict
 
-☐ Benign / Expected
-☐ Suspicious
-☐ Requires Further Investigation
+Expected
 
 ### Evidence
 
