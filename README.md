@@ -15,7 +15,7 @@
 * Windows Event Viewer
 * Sysmon
 * Sysmon Configuration: https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml
-* Host OS: [Linux Mint / Windows / etc.]
+* Host OS: Windows
 
 ### 2. Project Objective
 
@@ -44,17 +44,15 @@ The project demonstrates how a SOC Analyst can use Windows Event Viewer and secu
 
 **VM Resources:**
 
-* RAM: [e.g., 4 GB]
-* CPU: [e.g., 2 cores]
-* Storage: [e.g., 50 GB]
+* RAM: 4 GB
+* CPU: 6 cores
+* Storage: 50 GB
 
 ### Security Tools
 
 * Windows Event Viewer
 * Sysmon
-* [Sysmon Configuration Name]
-* Command Prompt
-* PowerShell (if used)
+* sysmon-config-master
 
 ---
 
@@ -92,7 +90,7 @@ Identify and analyze successful authentication events on the Windows system.
 
 ### Test Activity
 
-**Date/Time:** [Date and time]
+**Date/Time:** 
 
 **Account Used:** [Username]
 
