@@ -132,7 +132,7 @@ Expected
 
 ### Evidence
 
-4624-successful-logon.png
+![Event ID 4624 - Successful Logon](4624-successful-logon.png)
 
 # Investigation 2 — Event ID 4625
 
