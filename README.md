@@ -52,7 +52,7 @@ The project demonstrates how a SOC Analyst can use Windows Event Viewer and secu
 
 * Windows Event Viewer
 * Sysmon
-* sysmon-config-master
+* Sysmon Modular Configuration
 
 ---
 
@@ -116,13 +116,13 @@ Identify and analyze successful authentication events on the Windows system.
 
 ### Findings
 
-The event shows a successful logon for the computer account SYSTEM at 2026-08-09 05:04:33 AM.
+The event shows a successful logon for the SYSTEM account at 2026-08-09 05:04:33 AM.
 
-The Logon Type 5 indicates that this was a Service Logon, rather than an interactive user login. The authentication package used was Negotiate.
+The Logon Type 5 indicates that this was a Service Logon, rather than an interactive user logon. The authentication package used was Negotiate.
 
-No source network address or workstation name was recorded (-), which is consistent with this being a service logon rather than a remote network login.
+No source network address or workstation name was recorded (-), which is consistent with this being a service-related logon rather than a remote network authentication.
 
-The activity appears to be expected/benign because the account is the local computer account and the event represents service-related authentication within the Windows system.
+The activity appears to be expected/benign because SYSTEM is a built-in Windows account used by the operating system and services, and the event represents service-related authentication within the Windows system.
 
 No related failed logon attempts were identified before this event during the review period.
 
@@ -228,11 +228,13 @@ Time                Event ID        Activity
 
 ### Findings
 
-The account Test User was locked out at 1:17:11 AM, generating Event ID 4740.
+The Test User account was locked out at 1:17:11 AM, generating Event ID 4740.
 
 The Caller Computer Name recorded in the event was DESKTOP-40N5DHB$.
 
-Three 4625 Failed Logon events were observed immediately before the account lockout. The failed attempts occurred close together in time, indicating repeated authentication failures preceding the lockout.
+Three 4625 Failed Logon events were observed around the time of the account lockout. The failed attempts occurred close together in time, indicating repeated authentication failures associated with the lockout.
+
+The three failed logon attempts matched the configured three-attempt lockout threshold, resulting in the account being locked.
 
 The activity was intentionally generated as part of the controlled home lab, so the account lockout was considered expected lab activity.
 
@@ -335,7 +337,7 @@ Overall, the investigation demonstrated the importance of correlating multiple W
 
 # 7. MITRE ATT&CK Mapping
 
-No specific MITRE ATT&CK technique was assigned because the activity was generated as part of a controlled lab scenario.
+No specific MITRE ATT&CK technique was assigned because the activities were intentionally generated as part of a controlled home lab scenario, and no malicious activity was confirmed.
 
 ---
 
