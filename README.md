@@ -369,9 +369,9 @@ Monitor Windows Security logs using Event Viewer.
 Identify successful and failed authentication events.
 Investigate account lockout activity.
 Investigate newly created user accounts.
-Correlate multiple Windows Event IDs to understand activity sequences.
+Correlate multiple Windows Event IDs.
 Identify authentication patterns that may require further investigation.
-Understand the significance of fields such as Logon Type, Source Network Address, and Failure Reason.
+Understand fields such as Logon Type, Source Network Address, and Failure Reason.
 Document security investigations and findings.
 ---
 
