@@ -14,7 +14,7 @@
 * VirtualBox
 * Windows Event Viewer
 * Sysmon
-* Sysmon Configuration: https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml
+* Sysmon Configuration: [Sysmon Modular](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
 * Host OS: Windows
 
 ### 2. Project Objective
