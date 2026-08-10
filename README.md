@@ -90,7 +90,7 @@ Identify and analyze successful authentication events on the Windows system.
 
 ### Test Activity
 
-**Date/Time:** 2026-08-09 4:34:57 PM
+**Date/Time:** 2026-08-09 05:04:33 AM
 
 **Account Used:** SYSTEM
 
@@ -100,7 +100,7 @@ Identify and analyze successful authentication events on the Windows system.
 
 **Event ID:** 4624
 
-**Time:** 2026-08-09 4:34:57 PM
+**Time:** 2026-08-09 05:04:33 AM
 
 **Username:** SYSTEM
 
@@ -116,7 +116,7 @@ Identify and analyze successful authentication events on the Windows system.
 
 ### Findings
 
-The event shows a successful logon for the computer account SYSTEM at 2026-08-09 4:34:57 PM.
+The event shows a successful logon for the computer account SYSTEM at 2026-08-09 05:04:33 AM.
 
 The Logon Type 5 indicates that this was a Service Logon, rather than an interactive user login. The authentication package used was Negotiate.
 
@@ -145,7 +145,7 @@ Identify and investigate unsuccessful authentication attempts.
 
 ### Test Activity
 
-**Date/Time:** 2026-08-09 4:35:12 AM
+**Date/Time:** 2026-08-09 01:17:11 AM
 
 **Account Used:** Test User
 
@@ -157,7 +157,7 @@ Identify and investigate unsuccessful authentication attempts.
 
 **Event ID:** 4625
 
-**Time:** 2026-08-09 4:35:12 AM
+**Time:** 2026-08-09 01:17:11 AM
 
 **Target Username:** Test User
 
@@ -185,7 +185,7 @@ Expected Lab Activity
 
 ### Evidence
 
-<img width="631" height="439" alt="4625-failed-logon" src="https://github.com/user-attachments/assets/219336c4-d02f-436a-ba49-4a25bcc8a041" />
+<img width="625" height="438" alt="4625-failed-logon" src="https://github.com/user-attachments/assets/2d0fcec4-e638-45d6-b47c-a097d91fe93c" />
 
 ---
 
@@ -199,7 +199,7 @@ Investigate an account lockout and determine what activity occurred before the a
 
 ### Test Activity
 
-**Date/Time:** 2026-08-09 1:17:07 AM       
+**Date/Time:** 2026-08-09 1:17:11 AM       
 
 **Test Account:** Test User
 
@@ -209,7 +209,7 @@ Investigate an account lockout and determine what activity occurred before the a
 
 **Event ID:** 4740
 
-**Time:** 2026-08-09 1:17:07 AM   
+**Time:** 2026-08-09 1:17:11 AM   
 
 **Target Account:** Test User
 
@@ -220,15 +220,15 @@ Investigate an account lockout and determine what activity occurred before the a
 ```text
 Time                Event ID        Activity
 ------------------------------------------------
-1:17:05 AM            4625            Failed logon
-1:17:05 AM            4625            Failed logon
-1:17:06 AM            4625            Failed logon
-1:17:07 AM            4740            Account locked
+1:17:11 AM            4625            Failed logon
+1:17:11 AM            4625            Failed logon
+1:17:11 AM            4625            Failed logon
+1:17:11 AM            4740            Account locked
 ```
 
 ### Findings
 
-The account Test User was locked out at 1:17:07 AM, generating Event ID 4740.
+The account Test User was locked out at 1:17:11 AM, generating Event ID 4740.
 
 The Caller Computer Name recorded in the event was DESKTOP-40N5DHB$.
 
@@ -325,7 +325,7 @@ Overall, the investigation demonstrated the importance of correlating multiple W
 | Username       | Test User |
 | Source IP      | 127.0.0.1 |
 | Hostname       | DESKTOP-40N5DHB |
-| Timestamp      | 2026-08-09 1:17:07 AM |
+| Timestamp      | 2026-08-09 1:17:11 AM |
 | Event ID       | 4625, 4740 |
 | Logon Type     | 2 — Interactive|
 | Failure Reason | Unknown user name or bad password |
@@ -363,15 +363,14 @@ No specific MITRE ATT&CK technique was assigned because the activity was generat
 
 Through this lab, I learned how to:
 
-* Monitor Windows Security logs.
-* Identify successful and failed authentication events.
-* Investigate account lockouts.
-* Investigate newly created user accounts.
-* Correlate multiple Windows Event IDs.
-* Identify potentially suspicious authentication patterns.
-* Use Event Viewer as a basic security monitoring tool.
-* Document security investigations.
-
+Monitor Windows Security logs using Event Viewer.
+Identify successful and failed authentication events.
+Investigate account lockout activity.
+Investigate newly created user accounts.
+Correlate multiple Windows Event IDs to understand activity sequences.
+Identify authentication patterns that may require further investigation.
+Understand the significance of fields such as Logon Type, Source Network Address, and Failure Reason.
+Document security investigations and findings.
 ---
 
 # 10. Conclusion
